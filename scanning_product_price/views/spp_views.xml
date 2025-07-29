@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.actions.server" id="open_spp_kiosk_url">
+        <field name="name">Open Kiosk Url SPP</field>
+        <field name="model_id" ref="scanning_product_price.model_res_company"/>
+        <field name="path">spp-kiosk</field>
+        <field name="binding_model_id" ref="scanning_product_price.model_res_company"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = model._action_open_spp_kiosk_mode()
+        </field>
+        <!-- <field name="groups_id" eval="[(4, ref('hr_attendance.group_hr_attendance_manager'))]"/> -->
+    </record>
+
+    <menuitem id="menu_action_open_form" 
+                name="Scanning Product Mode"
+                action="open_spp_kiosk_url"
+                parent="sale.sale_menu_root" 
+                sequence="10"
+                />
+
+
+</odoo>

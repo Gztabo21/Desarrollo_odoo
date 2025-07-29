@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+
+    <t t-name="scanning_product_price.public_product_detail">
+
+            <div class="o_kiosk_mode_main d-flex flex-grow-1 justify-content-center align-items-center">
+                <div class="o_hr_spp_kiosk_card card rounded-3">
+                    <div class="card-body rounded-3">
+                        <div class="o_hr_spp_kiosk_card_wrapper d-flex flex-column align-items-center justify-content-center">
+                            <div class="o_hr_spp_kiosk_card_main p-3 mx-3 mx-xl-0 text-center">
+                                <p> Producto escaneado </p>
+                                <h5 class="text-muted mt-2 mb-0">
+                                   <t t-esc="this.productName"/>
+                                </h5>
+                                <h2 style="font-size:3rem;"><t t-esc="this.productPrice"/> <span t-esc="this.props.productDetailData.currency['symbol']"/></h2>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </t>
+</templates>

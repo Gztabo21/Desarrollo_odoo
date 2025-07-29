@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="scanning_product_price.ScanningProductComponent" owl="1">
+        <div class="container mt16 mb16">
+            <h1>Escaneo de Productooooooooooooo</h1>
+            <!-- <div class="row">
+                <div class="col-12">
+                    <input type="text" t-on-keyup="onKeyUp" placeholder="Escanea el código de barras del producto" class="form-control"/>
+                </div>
+            </div>
+            <div class="row mt16">
+                <div class="col-12">
+                    <t t-if="scannedProduct">
+                        <p>Producto Escaneado: <span t-esc="scannedProduct.name"/></p>
+                        <p>Precio: <span t-esc="scannedProduct.list_price"/></p>
+                    </t>
+                    <t t-else="">
+                        <p>No se ha escaneado ningún producto.</p>
+                    </t>
+                </div>
+            </div> -->
+        </div>
+    </t>
+</templates>
