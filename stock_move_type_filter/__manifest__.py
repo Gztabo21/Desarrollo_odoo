@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
-    "name": "MRP Stock Type Filter Main",
+    "name": "Stock Type Filter Main",
     "summary": "Filtrar el tipo de operacion para la bodega principal",
     "description": """
         This module extends the stock picking type model to add custom filters for MRP.
@@ -15,6 +15,7 @@
         # XML files can be added here if needed
         "views/stock_picking_views.xml",
     ],
+    "images":['static/description/banner.png'],
     "installable": True,
     "application": True,
     "price":0.0,
