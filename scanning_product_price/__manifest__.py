@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 {
-    "name": "Portal Product Price",
+    "name": "Product Price Checker Using Mode Kiosk",
     "version": "1.0.0",
-    "description": "Scannear los precios de los productos",
+    "description": "Scannear barcode and show details products",
     "author": "Gustavo Cacharuco",
     "website": "dev-odoo.team",
     "category": "product",
