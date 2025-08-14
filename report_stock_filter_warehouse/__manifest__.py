@@ -12,6 +12,7 @@
             'report_stock_filter_warehouse/static/src/search/*.xml',
         ]
     },
+    "images":['static/description/banner.png'],
     "installable": True,
     "application": True,
     "licenses":"LGPL-3"
