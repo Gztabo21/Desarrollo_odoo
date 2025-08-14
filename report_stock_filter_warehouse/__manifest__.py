@@ -15,5 +15,7 @@
     "images":['static/description/banner.png'],
     "installable": True,
     "application": True,
-    "licenses":"LGPL-3"
+    "licenses":"LGPL-3",
+    "price":50.0,
+    "currency":"USD"
 }
