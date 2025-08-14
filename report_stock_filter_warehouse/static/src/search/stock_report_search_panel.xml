@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+<t t-name="report_stock_filter_warehouse.StockReportSearchPanel.Regular" t-inherit="stock.StockReportSearchPanel.Regular" owl="1">
+    <xpath expr="//div/section[1]" position="replace">
+        <section t-if="warehouses.length > 1" class="o_search_panel_section o_search_panel_warehouse">
+            <header class="o_search_panel_section_header pt-4 pb-2 text-uppercase o_cursor_default">
+                <i t-attf-class="fa fa-filter o_search_panel_section_icon text-warning me-2"/>
+                <b>Bodegas</b>
+            </header>
+            <ul class="list-group d-block o_search_panel_field">
+                <li class="o_search_panel_filter_value list-group-item p-0 mb-1 border-0 o_cursor_pointer">
+                    <div class="form-check w-100">
+                            <input type="checkbox"
+                                t-attf-id="999_input"
+                                t-att-checked="state.active['warehouse'][999]"
+                                class="form-check-input"
+                                t-on-click="ev => this.toggleFilterValueWarehousesMulti(999, ev)"
+                            />
+                            <label class="o_search_panel_label form-check-label d-flex align-items-center justify-content-between w-100 o_cursor_pointer"
+                                t-attf-for="999_input"
+                                >
+                                <span class="o_search_panel_label_title text-truncate o_search_panel_label_title" t-esc="'TODOS LOS ALMACENES'"/>
+                               
+                            </label>
+                        </div>
+                    
+                </li>
+                <li class="o_search_panel_filter_value list-group-item p-0 mb-1 border-0 o_cursor_pointer"
+                    t-foreach="warehouses" t-as="warehouse" t-key="warehouse.id">
+                        <div class="form-check w-100">
+                            <input type="checkbox"
+                                t-attf-id="{{ warehouse.id }}_input"
+                                t-att-checked="state.active['warehouse'][warehouse.id] || state.active['warehouse'][999] "
+                                class="form-check-input"
+                                t-on-click="ev => this.toggleFilterValueWarehousesMulti(warehouse.id, ev)"
+                            />
+                            <label class="o_search_panel_label form-check-label d-flex align-items-center justify-content-between w-100 o_cursor_pointer"
+                                t-attf-for="{{ warehouse.id }}_input"
+                                >
+                                <span class="o_search_panel_label_title text-truncate" t-esc="warehouse.name"/>
+                               
+                            </label>
+                        </div>
+
+                </li>
+            </ul>
+        </section>
+    </xpath>
+</t>
+
+<t t-name="report_stock_filter_warehouse.StockReportSearchPanel"
+    t-inherit="stock.StockReportSearchPanel"
+    t-inherit-mode="extension" 
+    owl="1">
+    <xpath expr="//t[@t-call='stock.StockReportSearchPanel.Regular']" position="attributes">
+       <attribute name="t-call">report_stock_filter_warehouse.StockReportSearchPanel.Regular</attribute>
+    </xpath>
+</t>
+
+
+
+</templates>
