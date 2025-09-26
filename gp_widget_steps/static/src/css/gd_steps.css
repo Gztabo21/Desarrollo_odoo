@@ -1,0 +1,122 @@
+.ike-progress-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 1.5rem auto;
+}
+
+.ike-progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.ike-step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.ike-step-label {
+    margin-top: 8px;
+    color: #888;
+    font-size: 0.9rem;
+    transition: color 0.5s ease;
+}
+
+.ike-progress-line {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #ccc;
+    margin: 0 10px;
+    transition: background-color 0.5s ease;
+    position: relative;
+    /* Aseguramos que la línea sea visible */
+    display: flex; /* Añadido para ayudar a la alineación del texto si es necesario */
+    justify-content: center; /* Centra el texto horizontalmente si no está absolute */
+    align-items: flex-start; /* Posiciona el texto más arriba dentro de la línea */
+}
+
+/* Clases de estado */
+.ike-progress-step.active .ike-step-icon {
+    background-color: var(--primary); /* Naranja */
+}
+
+/* ... código anterior ... */
+
+.ike-progress-step.completed .ike-step-icon {
+    background-color: #4caf50; /* Verde */
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.ike-progress-step.completed .ike-step-icon::before {
+    content: '✔'; /* Esto inserta el checkmark */
+}
+
+/* ... código siguiente ... */
+
+.ike-progress-step.completed .ike-step-label {
+    color: #4caf50; /* Verde */
+    font-weight: bold;
+}
+
+.ike-progress-line.completed {
+    background-color: #4caf50; /* Verde */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.ike-step-icon.animate {
+    animation: fadeIn 0.8s ease;
+}
+
+.ike-progress-line.animate {
+    animation: fadeIn 0.8s ease;
+}
+
+.ike-progress-time {
+    position: absolute; /* Mantenemos el posicionamiento absoluto */
+    top: 10px; /* Ajusta este valor para la altura deseada debajo de la línea */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #a0a0a0; /* Color gris tenue inicial, como se ve en tu imagen */
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0; /* Inicialmente invisible o muy tenue */
+    transition: opacity 0.5s ease, color 0.5s ease; /* Transición para la opacidad y el color */
+}
+/* Clases de estado */
+.ike-progress-step.active .ike-step-icon {
+    background-color: var(--primary); /* Naranja */
+}
+
+/* Modificamos la clase .completed para que el texto también cambie de color */
+.ike-progress-line.completed {
+    background-color: #4caf50; /* Verde */
+}
+
+.ike-progress-line.completed .ike-progress-time {
+    color: #4caf50; /* Cambia el color del texto a verde */
+}
+
+.ike-progress-line.completed .ike-progress-time {
+    color: #a0a0a0; /* Cambia el color del texto a verde (o el color que quieras para el texto completado) */
+    opacity: 1; /* Se vuelve completamente visible */
+}

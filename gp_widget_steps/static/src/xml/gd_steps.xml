@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xml:space="preserve">
+    <t t-name="gp_widget_steps.StatusSteps" owl="1">
+         <div class="o_statusSteps_status" t-ref="root" role="radiogroup" aria-label="StatusSteps">
+         <t t-log="this"/>
+        <div class="ike-progress-bar-container" >
+            <t t-foreach="items.inline" t-as="item" t-key="item.value">
+                <div t-attf-class="ike-progress-step #{item.isSelected ? 'active' : ''}" 
+                     t-on-click="() => this.updateStepItemClick(item)">
+                    <span class="ike-step-icon"><t t-out="item_index + 1"/></span>
+                    <div class="ike-step-label"><t t-out="item.label"/></div>
+                </div>
+                <t t-if="!item_last">
+                    <div class="ike-progress-line" style="width: 40px; height: 2px; background: #ccc; margin: 0 8px;">
+                        <div class="ike-progress-time" style="text-align: center; font-size: 10px;">1min</div>
+                    </div>
+                </t>
+            </t>
+        </div>
+       
+        </div>
+    </t>
+</template>

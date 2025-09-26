@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_sale_order_form_inherit_widget_steps" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.widget.steps</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="after">
+                <field name="state" widget="gp_widget_steps" clickable="true" sorteditems="draft,sent,done"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
