@@ -4,7 +4,7 @@
     "summary": "Review stock of warehouse POS",
     "description": "Module to review stock of warehouse POS",
     "author": "Gustavo Cacharuco",
-    'website': "https://www.linkedin.com/in/gustavocacharuco/",
+    'website': "https://www.linkedin.com/in/gustavocacharuco26/",
     "category": "Point of Sale",
     "depends": [
         "base",
@@ -26,5 +26,5 @@
     'license': 'LGPL-3',
     'price':25.00,
     'currency':'USD',
-    'image':'static/description/banner.png',
+    "images":['static/description/banner.png'],
 }
