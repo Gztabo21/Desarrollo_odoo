@@ -4,7 +4,7 @@
     "summary": "Review stock of warehouse POS",
     "description": "Module to review stock of warehouse POS",
     "author": "Gustavo Cacharuco",
-    'website': "https://www.linkedin.com/in/gustavocacharuco26/",
+    'website': "https://www.linkedin.com/in/gustavo-cacharuco26/",
     "category": "Point of Sale",
     "depends": [
         "base",
