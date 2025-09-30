@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xml:space="preserve">
+    <t t-name="gp_stock_warehouse_pos.ProductCard" t-inherit="point_of_sale.ProductCard" t-inherit-mode="extension" owl="1">
+       <xpath expr="//div[hasclass('product-img')]" position="after">
+           <div class="gd-product-qty-available">
+               <span class="gd-qty-available-label">Quantity Available:</span>
+               <t t-if="this.productQtyAvailable &lt;= 0">
+                   <span class="gd-no-qty-available" t-esc="this.productQtyAvailable"/>
+               </t>
+                <t t-else="">
+                     <span class="gd-qty-available" t-esc="this.productQtyAvailable"/>
+               </t>
+           </div>
+       </xpath>
+    </t>
+</template>

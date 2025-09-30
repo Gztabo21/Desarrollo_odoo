@@ -1,0 +1,17 @@
+.gd-product-qty-available{
+    display: flex;
+    justify-content: center;
+    margin-top:8px;
+}
+.gd-qty-available-label{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.gd-qty-available{
+    color:green; 
+    font-weight: bold;
+}
+.gd-no-qty-available{
+    color: red;
+    font-weight: bold;
+}
