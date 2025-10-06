@@ -1,5 +1,5 @@
 {
-    'name': 'GP Widget Steps',
+    'name': 'Widget Steps Bar',
     'version': '1.0',
     'depends': ['base', 'web'],
     'author': 'Gustavo Cacharuco',
@@ -23,6 +23,6 @@
     },
     'installable': True,
     'application': False,
-    'price': 0.0,
+    'price': 25.0,
     'currency': 'USD',
 }
