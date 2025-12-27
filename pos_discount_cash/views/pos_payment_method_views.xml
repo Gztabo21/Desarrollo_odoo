@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="pos_payment_pos_discount_cash" model="ir.ui.view">
+        <field name="name">pos.payment.method.pos.discount.cash</field>
+        <field name="model">pos.payment.method</field>
+        <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[1]/group[1]" position="inside">
+                 <field name="pos_discount_payment_method" widget="percentage"/>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>
