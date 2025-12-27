@@ -25,5 +25,6 @@
     'price':100.0,
     "currency":"USD",
     "application":True,
-    "installable":True
+    "installable":True,
+    "license":"AGPL-3",
 }

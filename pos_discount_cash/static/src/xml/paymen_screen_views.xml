@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xml:space="preserve">
-    <t t-name="pos_melendez_custom.PaymentScreenMethods" t-inherit="point_of_sale.PaymentScreenMethods" t-inherit-mode="extension">
+    <t t-name="pos_discount_cash.PaymentScreenMethods" t-inherit="point_of_sale.PaymentScreenMethods" t-inherit-mode="extension">
         <xpath expr="//div[hasclass('payment-method-display')]" position="inside">
-            <t t-if="pos.company.pos_active_discount_payment_method  &amp;&amp; showDiscountPayment(paymentMethod)">
+
+            <t t-if="pos.company.pos_active_discount_cash_payment  &amp;&amp; 
+                    showDiscountPayment(paymentMethod) &amp;&amp; 
+                    paymentMethod.type === 'cash'">
                 <span style="color:#d94d4d; opacity:1.5; font-weight:bold;">
+    
                     (<t t-esc="this.env.utils.formatCurrency(this.getDiscountCashPayment(paymentMethod))"/>)
                 </span>
             </t>
