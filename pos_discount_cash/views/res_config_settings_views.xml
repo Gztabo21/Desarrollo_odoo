@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_setting_pos_discount_cash" model="ir.ui.view">
+        <field name="name">res.config.settings.pos.discount.cash</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='pos_payment_section']" position="inside">
+                 <setting string="Descuento por pago en efectivo" >
+                    <field name="pos_active_discount_payment_method" 
+                    widget="toggle_button"
+                    />
+                    <field name="pos_product_discount_payment_id"/>
+                    <!-- <field name="pos_discount_cash_payment"/> -->
+                </setting>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
