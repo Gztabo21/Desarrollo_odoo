@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>POS Self-Service — Odoo 18 Module</title>
+    <style>
+        :root{
+            --bg:#f6f9fc; --card:#ffffff; --primary:#0b74de; --muted:#657786;
+            --accent:#06b6d4; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;background:linear-gradient(180deg,#f8fbff 0%,var(--bg) 100%);color:#0b1720}
+        header{padding:48px 20px 20px;display:flex;align-items:center;gap:18px;max-width:1100px;margin:0 auto}
+        .logo{width:72px;height:72px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--primary),#3aa0f4);color:white;font-weight:700;font-size:18px}
+        h1{margin:0;font-size:26px}
+        p.lead{margin:6px 0 0;color:var(--muted)}
+        main{max-width:1100px;margin:28px auto;padding:0 20px;display:grid;grid-template-columns:1fr 360px;gap:24px}
+        .hero{background:var(--card);padding:28px;border-radius:12px;box-shadow:0 6px 18px rgba(12,36,76,0.06)}
+        .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+        .feature{display:flex;gap:12px;align-items:flex-start}
+        .icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#1e90ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+        aside.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(12,36,76,0.06);height:max-content}
+        .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+        .chip{background:#f1f5f9;padding:6px 10px;border-radius:999px;color:#0b1720;font-weight:600;font-size:13px}
+        .btn{display:inline-block;background:var(--primary);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+        .muted{color:var(--muted);font-size:14px}
+        footer{max-width:1100px;margin:18px auto;padding:0 20px 48px;color:var(--muted);font-size:13px}
+        ul{margin:8px 0 0;padding-left:18px}
+        code{background:#f3f4f6;padding:2px 6px;border-radius:6px;font-family:monospace}
+        @media (max-width:900px){main{grid-template-columns:1fr} .features{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SSP</div>
+        <div>
+            <h1>POS Self-Service (Auto Service)</h1>
+            <p class="lead">A lightweight self-service point of sale module for Odoo 18 — optimized for kiosks and unattended checkout flows.</p>
+            <div class="meta" style="margin-top:10px">
+                <div class="chip">Odoo 18 compatible</div>
+                <div class="chip">Version 1.0.0</div>
+                <div class="chip">License: AGPL-3</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 style="margin-top:0">Turn any terminal into a self-service POS</h2>
+            <p class="muted">This module provides a focused interface and helper workflows to run unattended sales: quick product selection, clear payment flows, receipt printing, and optional staff override.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="icon">UX</div>
+                    <div>
+                        <strong>Clean kiosk interface</strong>
+                        <div class="muted">Touch-friendly, large buttons, and simplified navigation for customers.</div>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">Pay</div>
+                    <div>
+                        <strong>Multiple payment methods</strong>
+                        <div class="muted">Support for cash, card terminals, and digital wallets (integrations via standard Odoo payment modules).</div>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">Cfg</div>
+                    <div>
+                        <strong>Fast configuration</strong>
+                        <div class="muted">Minimal settings required to enable self-service mode and define allowed product categories.</div>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">Safe</div>
+                    <div>
+                        <strong>Security & overrides</strong>
+                        <div class="muted">Staff override screens with PIN and configurable permissions to reduce misuse.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top:18px">Benefits</h3>
+            <ul>
+                <li>Reduce queues and speed up checkout.</li>
+                <li>Lower staffing costs for repetitive retail tasks.</li>
+                <li>Flexible: works on tablets, touchscreens, or dedicated kiosks.</li>
+            </ul>
+
+            <h3 style="margin-top:18px">Quick install</h3>
+            <p class="muted">Place the module folder in your Odoo addons path and update app list. Then install from Apps.</p>
+            <pre style="background:#f8fafc;border-radius:8px;padding:10px;margin:8px 0"><code># as root of your odoo installation
+cp -r pos_self_service /path/to/odoo/addons/
+# restart Odoo and update apps
+</code></pre>
+
+            <p class="muted">For advanced setup (hardware, card terminals) consult the module README or integration docs.</p>
+        </section>
+
+        <aside class="card">
+            <h3 style="margin-top:0">Get started</h3>
+            <p class="muted">Install the module from the Apps menu, then navigate to Point of Sale &rarr; Configuration &rarr; Self-Service</p>
+            <a class="btn" href="#">Install / Download</a>
+
+            <h4 style="margin-top:18px">Module details</h4>
+            <p class="muted"><strong>Technical</strong></p>
+            <ul>
+                <li>Models: pos.session, pos.order, res.users extensions</li>
+                <li>Views: kiosk UI, config settings, override dialogs</li>
+                <li>Assets: custom JS and CSS for kiosk mode</li>
+            </ul>
+
+            <h4 style="margin-top:12px">Support</h4>
+            <p class="muted">Report issues or request features via your module repository or contact the maintainer.</p>
+            <p style="margin-top:12px"><strong>Maintainer:</strong><br>Development Team</p>
+            <p style="margin-top:6px" class="muted"><strong>Email:</strong> support@example.com</p>
+        </aside>
+    </main>
+
+    <footer>
+        <div style="max-width:1100px;margin:0 auto;padding:0 20px">
+            <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+                <div class="muted">POS Self-Service — compatible with Odoo 18 • © 2026</div>
+                <div class="muted">This page provides a concise overview of the module. For source code and full documentation, check the repository.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

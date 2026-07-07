@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_cash_control_permissions.CashMovePopup" t-inherit="point_of_sale.CashMovePopup" t-inherit-mode="extension">
+        <xpath expr="//button[contains(., 'Cash Out')]" position="replace">
+            <button t-if="showCashOut" t-on-click="() => this.onClickButton('out')"
+                t-attf-class="input-type btn btn-secondary lh-lg #{this.ui.isSmall ? 'btn-md' : 'btn-lg'} #{state.type === 'out' ? 'red-highlight btn-danger' : '' }">
+                Cash Out
+            </button>
+        </xpath>
+    </t>
+</templates>

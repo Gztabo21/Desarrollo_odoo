@@ -1,0 +1,84 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">POS Cash Control Permissions</h2>
+        <h3 class="oe_slogan">Control de entrada y salida de efectivo en POS</h3>
+        <div class="oe_span12">
+            <p class="text-center">
+                Este módulo permite controlar quién puede retirar efectivo del POS,
+                añadiendo un grupo de seguridad específico para retiros de efectivo.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan">Configuración</h4>
+        <div class="oe_span12">
+            <ol>
+                <li>Instale el módulo <strong>POS Cash Control Permissions</strong></li>
+                <li>Vaya a <em>Ajustes → Usuarios → Usuarios</em> y seleccione el usuario</li>
+                <li>En la pestaña <strong>Permisos</strong>, busque el grupo <strong>Point of Sale / Cash Withdrawal</strong> y actívelo</li>
+                <li>En la configuración del POS (<em>Punto de Venta → Configuración</em>), asegúrese de tener habilitado <strong>Control de Efectivo</strong></li>
+                <li>Abra una sesión de POS — el botón <strong>Cash In/Out</strong> estará disponible</li>
+                <li>Los usuarios sin el permiso <strong>Cash Withdrawal</strong> verán el botón pero no podrán seleccionar <strong>Cash Out</strong></li>
+                <li>Consulte los movimientos en <em>Punto de Venta → Cash Moves</em></li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan">Características</h4>
+        <div class="oe_span6">
+            <ul>
+                <li>Grupo de seguridad "Cash Withdrawal" para controlar retiros</li>
+                <li>Botón "Cash Out" oculto para usuarios sin permiso</li>
+                <li>Validación en servidor y frontend</li>
+            </ul>
+        </div>
+        <div class="oe_span6">
+            <ul>
+                <li>Registro de todos los movimientos de efectivo (entradas y salidas)</li>
+                <li>Registro fecha/hora, usuario, monto, motivo y sesión</li>
+                <li>Vistas para consultar y filtrar movimientos</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan">Permisos</h4>
+        <div class="oe_span12">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Grupo</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>POS User</td>
+                    <td>Puede ver movimientos de efectivo (solo lectura)</td>
+                </tr>
+                <tr>
+                    <td>Cash Withdrawal</td>
+                    <td>Puede retirar efectivo y registrar movimientos</td>
+                </tr>
+                <tr>
+                    <td>POS Administrator</td>
+                    <td>Acceso completo a todos los movimientos</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan">Autor</h4>
+        <div class="oe_span12 text-center">
+            <p>Gustavo Cacharuco</p>
+        </div>
+    </div>
+</section>

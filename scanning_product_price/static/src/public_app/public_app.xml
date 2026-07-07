@@ -1,48 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
 
-<t t-name="scanning_product_price.companyHeader">
-    <img t-att-src="companyImageUrl" alt="Company Logo" class="o_hr_spp_kiosk_company_image align-self-center"/>
-</t>
+    <t t-name="scanning_product_price.companyHeader">
+        <img t-att-src="companyImageUrl" alt="Company Logo" class="o_hr_spp_kiosk_company_image align-self-center"/>
+    </t>
 
-<t t-name="scanning_product_price.BarcodeScanner" t-inherit="barcodes.BarcodeScanner" t-inherit-mode="primary">
-    <xpath expr="//div[hasclass('o_barcode_mobile_container')]" position="replace">
-        <div class="o_hr_spp_kiosk d-flex justify-content-around" t-att-class="{'position-relative' : !isDisplayStandalone}">
-            <div t-if="isBarcodeScannerSupported"  class="o_mobile_barcode btn btn-light btn-lg p-5 rounded-3" t-att-class="{'position-absolute' : !isDisplayStandalone}">
-                <i class="fa fa-3x fa-barcode mb-3"/>
-                <span class="d-block">Scan product</span>
+    <t t-name="scanning_product_price.BarcodeScanner" t-inherit="barcodes.BarcodeScanner" t-inherit-mode="primary">
+        <xpath expr="//div[hasclass('o_barcode_mobile_container')]" position="replace">
+            <div class="o_hr_spp_kiosk d-flex justify-content-around" t-att-class="{'position-relative' : !isDisplayStandalone}">
+                <div t-if="isBarcodeScannerSupported" class="o_mobile_barcode btn btn-light btn-lg p-5 rounded-3" t-att-class="{'position-absolute' : !isDisplayStandalone}">
+                    <i class="fa fa-3x fa-barcode mb-3"/>
+                    <span class="d-block">Scan product</span>
+                </div>
+
             </div>
-
-        </div>
-    </xpath>
-</t>
+        </xpath>
+    </t>
 
 
 
 
 
-<t t-name="scanning_product_price.public_kiosk_app">
-    <MainComponentsContainer/>
-    <CardLayout fromTrialMode="this.props.fromTrialMode" companyImageUrl="this.companyImageUrl" kioskReturn.bind="kioskReturn">
+    <t t-name="scanning_product_price.public_kiosk_app">
+        <MainComponentsContainer/>
+        <CardLayout fromTrialMode="this.props.fromTrialMode" companyImageUrl="this.companyImageUrl" kioskReturn.bind="kioskReturn">
 
-        <t t-if="this.state.active_display === 'main'">
-            <div class="o_hr_kiosk_mode_main d-flex flex-column flex-sm-row gap-3" style="margin:3rem auto;"> 
-                <t t-if="this.props.kioskMode !== 'manual'">
-                <SppBarcodeScanner
-                    token="this.props.token"
-                    barcodeSource="this.props.barcodeSource"
-                    onBarcodeScanned="(ev) => this.onBarcodeScanned(ev)"/>
-                </t>
-            </div>
-        </t>
+            <t t-if="this.state.active_display === 'main'">
+                <div class="o_hr_kiosk_mode_main d-flex flex-column flex-sm-row gap-3" style="margin:3rem auto;">
+                    <t t-if="this.props.kioskMode !== 'manual'">
+                        <SppBarcodeScanner token="this.props.token" barcodeSource="this.props.barcodeSource" onBarcodeScanned="(ev) => this.onBarcodeScanned(ev)"/>
+                    </t>
+                </div>
+            </t>
 
-        <t t-if="this.state.active_display === 'scanned'">
-            <SppProductDetail 
-            productDetailData="this.productData" 
-            currencyId="this.props.companyCurrency"
-            kioskReturn="() => this.kioskReturn(true)"/>
-        </t>
+            <t t-if="this.state.active_display === 'scanned'">
+                <SppProductDetail productDetailData="this.productData" currencyId="this.props.companyCurrency" kioskReturn="() => this.kioskReturn(true)"/>
+            </t>
 
-    </CardLayout>
-</t>
+        </CardLayout>
+    </t>
 </templates>

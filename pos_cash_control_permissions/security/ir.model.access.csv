@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pos_cash_withdrawal_user,pos.cash.withdrawal user,model_pos_cash_withdrawal,point_of_sale.group_pos_user,1,0,0,0
+access_pos_cash_withdrawal_manager,pos.cash.withdrawal manager,model_pos_cash_withdrawal,point_of_sale.group_pos_manager,1,1,1,1
+access_pos_cash_withdrawal_self,pos.cash.withdrawal self,model_pos_cash_withdrawal,group_pos_cash_withdrawal,1,0,1,0
