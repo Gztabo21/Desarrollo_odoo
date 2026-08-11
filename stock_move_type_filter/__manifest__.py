@@ -9,7 +9,7 @@
     "author": "Gustavo cacharuco",
     "website": "https://dev-odoo.team",
     "category": "stock",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "depends": ["stock"],
     "data": [
         # XML files can be added here if needed
