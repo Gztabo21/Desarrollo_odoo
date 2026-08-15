@@ -24,8 +24,8 @@
     "author": "GUSTAVO CACHARUCO",
     "depends": ["point_of_sale"],
     "images": [
-        "static/description/icon.png",
         "static/description/banner.jpeg",
+        "static/description/icon.png",
         "static/description/banner.png",
     ],
     "assets": {
