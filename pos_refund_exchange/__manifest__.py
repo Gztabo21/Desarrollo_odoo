@@ -3,7 +3,6 @@
     "name": "POS Refund Exchange",
     "version": "19.0.1.1.0",
     "category": "Sales/Point of Sale",
-    "images": ["pos_refund_exchange/static/description/banner.png"],
     "summary": "Odoo POS refund exchange app for product return and replacement in one order",
     "description": """
 POS Refund Exchange
@@ -38,10 +37,14 @@ Do not install it together with duplicate exchange patches from l10n_cl_fe_pos_n
 would load the same overrides twice.
 """,
     "author": "Personales",
-    "license": "LGPL-3",
+    "license": "OPL-1",
     "depends": [
         "point_of_sale",
     ],
+    "images": [
+        "pos_refund_exchange/static/description/banner.png",
+        "pos_refund_exchange/static/description/icon.png"
+        ],
     "assets": {
         "point_of_sale._assets_pos": [
             "pos_refund_exchange/static/src/js/refund_exchange_ticket_screen.js",
@@ -51,8 +54,11 @@ would load the same overrides twice.
         ],
     },
     "installable": True,
-    "price": 10.0,
+    "price": 30.0,
     "currency": "USD",
     "application": False,
     "auto_install": False,
+    "license": "OPL-1",
+    "website": "https://dev-odoo.dev",
+    "support": "https://dev-odoo.dev",
 }
