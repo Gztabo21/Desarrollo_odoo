@@ -25,7 +25,7 @@
     "depends": ["point_of_sale"],
     "images": [
         "static/description/icon.png",
-        "static/description/cover.png",
+        "static/description/banner.jpeg",
         "static/description/banner.png",
     ],
     "assets": {
