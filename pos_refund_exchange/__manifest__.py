@@ -37,13 +37,13 @@ Do not install it together with duplicate exchange patches from l10n_cl_fe_pos_n
 would load the same overrides twice.
 """,
     "author": "GUSTAVO CACHARUCO",
-    "license": "GPL-3",
     "depends": [
         "point_of_sale",
     ],
     "images": [
-        "pos_refund_exchange/static/description/banner.png",
         "pos_refund_exchange/static/description/icon.png"
+        "pos_refund_exchange/static/description/cover.png"
+        "pos_refund_exchange/static/description/banner.png",
         ],
     "assets": {
         "point_of_sale._assets_pos": [
