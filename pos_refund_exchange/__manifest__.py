@@ -36,8 +36,8 @@ This module does not depend on Chilean localization and is designed for standard
 Do not install it together with duplicate exchange patches from l10n_cl_fe_pos_nc if those
 would load the same overrides twice.
 """,
-    "author": "Personales",
-    "license": "OPL-1",
+    "author": "GUSTAVO CACHARUCO",
+    "license": "GPL-3",
     "depends": [
         "point_of_sale",
     ],
