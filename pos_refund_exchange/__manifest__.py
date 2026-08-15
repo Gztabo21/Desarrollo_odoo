@@ -53,6 +53,7 @@ would load the same overrides twice.
             "pos_refund_exchange/static/src/js/pos_store.js",
         ],
     },
+    "data": [],
     "installable": True,
     "price": 30.0,
     "currency": "USD",
